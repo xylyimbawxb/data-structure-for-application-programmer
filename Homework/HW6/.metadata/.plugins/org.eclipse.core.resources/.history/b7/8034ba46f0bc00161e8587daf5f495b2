@@ -1,0 +1,72 @@
+import java.util.Set;
+
+/**
+ * 08722 Homework 6. Word class.
+ *
+ * Andrew ID: xinw3
+ * 
+ * @author Xin Wang
+ *
+ */
+public class Word implements Comparable<Word> {
+    /**
+     * 
+     */
+    private String word;
+    /**
+     * index to store line numbers of each word.
+     */
+    private Set<Integer> index;
+    /**
+     * frequency indicates the number of words.
+     */
+    private int frequency;
+
+    /**
+     * Constructor with a string parameter.
+     */
+    public Word(String s) {
+        word = s;
+    }
+
+    // TODO implement methods below.
+    public void addToIndex(Integer line) {
+        index.add(line);
+    }
+
+    public Set<Integer> getIndex() {
+        return index;
+    }
+
+    public String getWord() {
+        return word;
+    }
+
+    public int getFrequency() {
+        return frequency;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(word);
+        sb.append(" ");
+        sb.append(frequency);
+        sb.append(" ");
+        sb.append("[");
+        int size = index.size();
+        for (int i = 0; i < size; i++) {
+            System.out.println(i);
+            if (i != size - 1) {
+                System.out.println(",");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+
+    @Override
+    public int compareTo(int f) {
+        return f - frequency;
+    }
+}

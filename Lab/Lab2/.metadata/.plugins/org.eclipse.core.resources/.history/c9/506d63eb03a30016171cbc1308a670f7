@@ -1,0 +1,38 @@
+
+public class SLLTest {
+    
+    public class ListNode {
+      int val;
+      ListNode next;
+      ListNode(int x) { val = x; }
+    }
+     
+    public ListNode reverseBetween(ListNode head, int m, int n) {
+        ListNode mNode = new ListNode(0);
+        ListNode nNode = new ListNode(0);
+        ListNode nextNode = new ListNode(0);
+        int temp;
+        int num = 1;
+        
+        nextNode = head;
+        mNode = head;
+        nNode = head;
+        if (m == n | head == null) {
+            return head;
+        }
+        while (nextNode != null) {
+            if (num == m) {
+                mNode = nextNode;
+            }
+            if (num == n) {
+                nNode = nextNode;
+            }
+            num++;
+            nextNode = nextNode.next;
+        }
+        temp = nNode.val;
+        nNode.val = mNode.val;
+        mNode.val = temp;
+        return head;
+    }
+}

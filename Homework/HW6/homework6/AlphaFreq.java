@@ -1,0 +1,17 @@
+import java.util.Comparator;
+/**
+ * The comparator class to sort first alphabetically
+ * and then sort frequency as ascending order.
+ * @author Xin Wang
+ * Andrew ID: xinw3
+ */
+public class AlphaFreq implements Comparator<Word> {
+    @Override
+    public int compare(Word w1, Word w2) {
+        int alphaResult = w1.getWord().compareTo(w2.getWord());
+        if (alphaResult != 0) {
+            return alphaResult;
+        }
+        return w1.getFrequency() - w2.getFrequency();
+    }
+}

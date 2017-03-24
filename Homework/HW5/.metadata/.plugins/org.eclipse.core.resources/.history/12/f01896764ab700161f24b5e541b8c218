@@ -1,0 +1,15 @@
+
+public class hw5test {
+
+    public static void main(String[] args) {
+        String string = "Welcome to CMU! 08722 is awesome! I like data_structure";
+        String[] words = string.split("\\W");
+        for (String word : words) {
+            if (word.matches("[a-zA-Z]+")) {
+                System.out.print(word + "::");
+            }
+        }
+
+    }
+
+}

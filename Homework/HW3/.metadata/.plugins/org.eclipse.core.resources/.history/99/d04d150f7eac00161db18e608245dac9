@@ -1,0 +1,13 @@
+
+public class HW3Test {
+
+    public static void main(String[] args) {
+//        SortedLinkedList test = new SortedLinkedList();
+//        test.add("abcd");
+        String[] unsorted = {"bcda", "abcd", "cdba", "ddpp", "abcd"};
+        SortedLinkedList test = new SortedLinkedList(unsorted);
+        //test.removeFirst();
+        test.removeAt(1);
+        test.display();
+    }
+}

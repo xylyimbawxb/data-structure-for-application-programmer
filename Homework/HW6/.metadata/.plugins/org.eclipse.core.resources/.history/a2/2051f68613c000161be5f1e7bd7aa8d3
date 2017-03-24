@@ -1,0 +1,194 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
+/**
+ * This class is to build an index tree.
+ * Using three different ways.
+ * Andrew ID: xinw3
+ * @author Xin Wang
+ */
+public class Index {
+
+    /**
+     * Record the number of lines.
+     */
+    private int numOfLines;
+    /**
+     * Build an index tree using a natural alphabetical order.
+     * @param fileName the input file.
+     * @return BST<Word> the index tree.
+     */
+    private BST<Word> tree = null;
+    /**
+     * The index set.
+     */
+    private Set<Integer> index;
+    /**
+     * Flag to indicate whether sort ignoring case.
+     */
+    private boolean isLowerCase = false;
+    /**
+     * Method to build an index tree.
+     * @param fileName String value of the file to be built.
+     * @return BST<Word> the index tree.
+     */
+    public BST<Word> buildIndex(String fileName) {
+        tree = new BST<Word>();
+        numOfLines = 0;
+        isLowerCase = false;
+        readFile(fileName);
+        return tree;
+    }
+
+    /**
+     * Method to build an index tree as the given comparator order.
+     * @param fileName String value of the file to be built.
+     * @param comparator the order.
+     * @return BST tree built as the given comparator.
+     */
+    public BST<Word> buildIndex(String fileName, Comparator<Word> comparator) {
+        tree = new BST<Word>(comparator);
+        numOfLines = 0;
+        if (comparator.getClass().getName().equals("IgnoreCase")) {
+            isLowerCase = true;
+        }
+        readFile(fileName);
+        return tree;
+    }
+
+    /**
+     * Method to build index tree using an ArrayList and sort as the given comparator.
+     * @param list ArralyList to build the index tree.
+     * @param comparator the order given.
+     * @return BST<Word> the index tree.
+     */
+    public BST<Word> buildIndex(ArrayList<Word> list, Comparator<Word> comparator) {
+        System.out.println(list);
+        BST<Word> newTree = new BST<Word>(comparator);
+        int size = list.size();
+        for (int i = 0; i < size; i++) {
+            Word w = list.get(i);
+            //Comment this.
+            //System.out.println("buildIndex(ArrayList<Word> list, Comparator<Word> comparator)");
+            //System.out.println(w);
+            //
+            if (w.getWord().matches("[a-zA-Z]+")) {
+                newTree.insert(w);
+                //System.out.println("New insert: " + w);
+            }
+        }
+        return newTree;
+    }
+
+    /**
+     * Method to sort the BST alphabetically.
+     * @param tr index BST.
+     * @return ArrayList sorted.
+     */
+    public ArrayList<Word> sortByAlpha(BST<Word> tr) {
+        ArrayList<Word> indexList = new ArrayList<Word>();
+        Iterator<Word> iter = tr.iterator();
+        while (iter.hasNext()) {
+            indexList.add(iter.next());
+        }
+        Collections.sort(indexList);
+        return indexList;
+    }
+
+    /**
+     * Method to sort the BST as frequency.
+     * @param tr BST<Word>
+     * @return ArrayList sorted.
+     */
+    public ArrayList<Word> sortByFrequency(BST<Word> tr) {
+        ArrayList<Word> indexList = new ArrayList<Word>();
+        Iterator<Word> iter = tr.iterator();
+        while (iter.hasNext()) {
+            indexList.add(iter.next());
+        }
+        Collections.sort(indexList, new Frequency());
+        return indexList;
+    }
+
+    /**
+     * Method to get the highest frequency.
+     * @param tr the index BST.
+     * @return ArrayList of the highest frequency Words.
+     */
+    public ArrayList<Word> getHighestFrequency(BST<Word> tr) {
+        //throw new RuntimeException("Implement this!");
+        ArrayList<Word> maxList = new ArrayList<Word>();
+        Iterator<Word> iter = tr.iterator();
+        int maxFreq = 0;
+        while (iter.hasNext()) {
+            Word word = iter.next();
+            int iterFreq = word.getFrequency();
+            if (maxFreq < iterFreq) {
+                maxFreq = iterFreq;
+                if (maxList.size() != 0) {
+                    maxList.clear();
+                }
+                maxList.add(word);
+            } else if (maxFreq == iterFreq) {
+                maxList.add(word);
+            }
+        }
+        return maxList;
+    }
+    /**
+     * Helper function to read file and update the value in BST.
+     * @param fileName String value of the file to be read
+     */
+    private void readFile(String fileName) {
+        Scanner scanner = null;
+        try {
+        if (fileName != null && !fileName.isEmpty()) {
+            File file = new File(fileName);
+            scanner = new Scanner(file, "latin1");
+            while (scanner.hasNextLine()) {
+                numOfLines++;
+                String line = scanner.nextLine();
+                if (isLowerCase) {
+                    line = line.toLowerCase();
+                }
+                if (line != null && !line.isEmpty()) {
+                    String[] words = line.split("\\W");
+                    for (String word : words) {
+                        if (word.matches("[a-zA-Z]+")) {
+                            Word toInsert = new Word(word);
+                            // The word has already in the tree.
+                            Word inTree = tree.search(toInsert);
+                            int freq;
+                            if (inTree != null) {
+                                freq = inTree.getFrequency();
+                                freq++;
+                                index = inTree.getIndex();
+                                inTree.setFrequency(freq);
+                                inTree.addToIndex(numOfLines);
+                            } else {
+                                freq = 1;
+                                index = new TreeSet<Integer>();
+                                index.add(numOfLines);
+                                Word newWord = new Word(word, freq, index);
+                                tree.insert(newWord);
+                            }              
+                        }
+                    }
+                }
+            }
+        }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            if (scanner != null) {
+                scanner.close();
+            }
+        }
+    }
+}

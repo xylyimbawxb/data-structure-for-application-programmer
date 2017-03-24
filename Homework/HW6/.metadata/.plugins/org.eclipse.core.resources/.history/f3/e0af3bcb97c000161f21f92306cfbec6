@@ -1,0 +1,54 @@
+import java.util.PriorityQueue;
+
+public class hw6Test {
+    public class HuffmanTree implements Comparable<HuffmanTree> {
+        public int frequency;
+        public HuffmanTree(int freq) {
+            frequency = freq;
+        }
+        @Override
+        public int compareTo(HuffmanTree t) {
+            return frequency - t.frequency;
+        }
+    }
+    public class HuffmanNode extends HuffmanTree {
+        public HuffmanTree left, right;
+        public HuffmanNode (HuffmanTree l, HuffmanTree r) {
+            super (l.frequency + r.frequency);
+            left = l;
+            right = r;
+        }
+    }
+    public class HuffmanLeaf extends HuffmanTree {
+        public char value;
+        public HuffmanLeaf(int freq, char c) {
+            super(freq);
+            value = c;
+        }
+    }
+    public class HuffmanCode {
+        public static HuffmanTree buildTree(int[] charFreqs) {
+            PriorityQueue<HuffmanTree> trees = new PriorityQueue<HuffmanTree>();
+            // At first, we have a forest of leaves, one for each non-empty character.
+            for (int i = 0; i < charFreqs.length; i++) {
+                if (charFreqs[i] > 0) {
+                    trees.offer(new HuffmanLeaf(charFreqs[i], (char)i))
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        String input = "SUSIE SAYS IT IS EASY\n";
+        char[] inputChar = input.toCharArray();
+        System.out.println("There are " + inputChar.length + "characters.");
+        int[] charFreq = new int[256];
+        for (char c:inputChar) {
+            charFreq[c]++;
+        }
+        for (char c:inputChar) {
+            System.out.print(c + " ");
+        }
+        System.out.println("Just to see if there is any linefeed character." + inputChar[inputChar.length - 1] + "haha");
+    }
+}

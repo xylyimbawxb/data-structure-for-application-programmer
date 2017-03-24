@@ -1,0 +1,95 @@
+import java.util.Iterator;
+import java.util.Set;
+
+/**
+ * 08722 Homework 6. Word class.
+ *
+ * Andrew ID: xinw3
+ * 
+ * @author Xin Wang
+ *
+ */
+public class Word implements Comparable<Word> {
+    /**
+     * The word String.
+     */
+    private String word;
+    /**
+     * index to store line numbers of each word.
+     */
+    private Set<Integer> index;
+    /**
+     * frequency indicates the number of words.
+     */
+    private int frequency;
+
+    /**
+     * Constructor with a string parameter.
+     */
+    public Word(String s) {
+        word = s;
+    }
+    /**
+     * Constructor with 3 parameters.
+     * @param s word String.
+     * @param frequency the frequency of the word.
+     * @param index the index set of the word's line number.
+     */
+    public Word(String s, int freq, Set<Integer> idx) {
+        word = s;
+        frequency = freq;
+        index = idx;
+    }
+
+    // TODO implement methods below.
+    /**
+     * add the line number to index set.
+     * @param line
+     */
+    public void addToIndex(Integer line) {
+        index.add(line);
+    }
+
+    public Set<Integer> getIndex() {
+        return index;
+    }
+
+    public String getWord() {
+        return word;
+    }
+
+    public int getFrequency() {
+        return frequency;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(word);
+        sb.append(" ");
+        sb.append(frequency);
+        sb.append(" ");
+        sb.append("[");
+        Iterator<Integer> iter = index.iterator();
+        int size = index.size();
+        for (int i = 0; i < size; i++) {
+            if(iter.hasNext()) {
+                System.out.println(iter.next());
+            }
+            if (i != size - 1) {
+                System.out.println(",");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+
+    /**
+     * compareTo method to sort word using frequency.
+     * by desending order.
+     */
+    @Override
+    public int compareTo(Word w) {
+        return word.compareTo(w.getWord());
+    }
+}

@@ -1,0 +1,23 @@
+import java.util.Arrays;
+
+public class Quiz1Test {
+    public static void main(String[] args) {
+    String course = "08722";
+    Object[] a = {Integer.valueOf(1), course, new int[0]};
+    Object[] b = a.clone();
+    //((int[])(a[2]))[0] = 1;
+    System.out.println("b = a.clone(); :" + a.equals(b));
+    
+//    b[1] = new String("08722");
+//    b[2] = new int [1];
+    
+    //((int[])(b[2]))[0] = 1;
+    
+//    System.out.println(a == b);
+//    System.out.println(a[1].equals(b[1]));
+//    System.out.println(a[1] == b[1]);
+//    System.out.println(Arrays.equals(a, b));
+    //System.out.println(a[2].toString());
+    }
+    //binary search return -low - 1;
+}

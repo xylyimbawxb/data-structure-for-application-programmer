@@ -1,0 +1,13 @@
+
+public class hw5test {
+
+    public static void main(String[] args) {
+        String string = "Welcome to CMU! 08722 is awesome! I like data_structure";
+        private String[] words = string.split("\\W");
+        for (String word : words) {
+            System.out.print(word + " ");
+        }
+
+    }
+
+}

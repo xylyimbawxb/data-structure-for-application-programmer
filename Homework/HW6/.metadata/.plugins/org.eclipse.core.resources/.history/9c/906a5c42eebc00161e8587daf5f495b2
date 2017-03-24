@@ -1,0 +1,15 @@
+import java.util.Comparator;
+/**
+ * 08722 Homework 6.
+ * Frequency class.
+ *
+ * Andrew ID: xinw3
+ * @author Xin Wang
+ *
+ */
+public class Frequency implements Comparator<Word> {
+    @Override
+    public int compare() {
+        
+    }
+}

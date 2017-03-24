@@ -1,0 +1,226 @@
+!SESSION 2016-11-08 09:38:47.349 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/xinwang/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/xinwang/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-11-08 09:39:14.170
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 4 4 2016-11-08 09:39:20.207
+!MESSAGE Referenced part does not exist yet: org.eclipse.jdt.ui.PackageExplorer.
+
+!ENTRY WACommon 4 0 2016-11-08 09:39:22.988
+!MESSAGE Plugin folder path:/Applications/Eclipse.app/Contents/Eclipse/../../../../Users/xinwang/.p2/pool/plugins
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-08 09:39:24.374
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-08 09:39:27.403
+!MESSAGE No profile found: xinwang
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-08 09:39:27.502
+!MESSAGE Monitoring content of /Users/xinwang/.aws/credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-08 09:39:27.654
+!MESSAGE AWS toolkit core plugin initialized after 3281 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-08 09:39:27.723
+!MESSAGE The current accountId is not found in the system. Switching to the default account.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-08 09:39:27.841
+!MESSAGE Initialized a new Cognito identity us-east-1:d690ac76-96dc-4b94-a58c-3bdba5925801
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-08 09:39:35.348
+!MESSAGE Azure SDK is not installed.
+!STACK 0
+java.io.IOException: Azure SDK is not installed.
+	at com.interopbridges.tools.windowsazure.WindowsAzureProjectManager.getLatestAzureSdkDir(WindowsAzureProjectManager.java:2244)
+	at com.persistent.util.WAStartUp.getSchemasLocation(WAStartUp.java:246)
+	at com.persistent.util.WAStartUp.createEntries(WAStartUp.java:195)
+	at com.persistent.util.WAStartUp.makeXMLCatalogEntry(WAStartUp.java:183)
+	at com.persistent.util.WAStartUp.earlyStartup(WAStartUp.java:68)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:77)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$55.run(Workbench.java:2829)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-08 09:39:35.380
+!MESSAGE RemoteSystemsTempFilesisOpentrue
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-08 09:39:35.382
+!MESSAGE RemoteSystemsTempFilesisNaturefalse
+
+!ENTRY org.eclipse.oomph.setup.ui 1 0 2016-11-08 09:39:35.844
+!MESSAGE Setup tasks were performed during startup updating 5 preferences. See '/Applications/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.oomph.setup/setup.log' for details
+!SESSION 2016-11-08 22:22:37.537 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/xinwang/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/xinwang/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-11-08 22:22:47.071
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-08 22:22:54.769
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-08 22:22:56.776
+!MESSAGE Monitoring content of /Users/xinwang/.aws/credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-08 22:22:56.913
+!MESSAGE AWS toolkit core plugin initialized after 2144 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-08 22:22:56.941
+!MESSAGE Found valid identity id cache us-east-1:d690ac76-96dc-4b94-a58c-3bdba5925801
+
+!ENTRY WACommon 4 0 2016-11-08 22:22:59.843
+!MESSAGE Plugin folder path:/Applications/Eclipse.app/Contents/Eclipse/../../../../Users/xinwang/.p2/pool/plugins
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-08 22:23:01.002
+!MESSAGE Azure SDK is not installed.
+!STACK 0
+java.io.IOException: Azure SDK is not installed.
+	at com.interopbridges.tools.windowsazure.WindowsAzureProjectManager.getLatestAzureSdkDir(WindowsAzureProjectManager.java:2244)
+	at com.persistent.util.WAStartUp.getSchemasLocation(WAStartUp.java:246)
+	at com.persistent.util.WAStartUp.createEntries(WAStartUp.java:195)
+	at com.persistent.util.WAStartUp.makeXMLCatalogEntry(WAStartUp.java:183)
+	at com.persistent.util.WAStartUp.earlyStartup(WAStartUp.java:68)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:77)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$55.run(Workbench.java:2829)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-08 22:23:01.049
+!MESSAGE Homework2isOpentrue
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-08 22:23:01.051
+!MESSAGE Homework2isNaturefalse
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-08 22:23:01.052
+!MESSAGE RemoteSystemsTempFilesisOpentrue
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-08 22:23:01.053
+!MESSAGE RemoteSystemsTempFilesisNaturefalse
+
+!ENTRY org.eclipse.jface.text 2 0 2016-11-09 01:04:11.313
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-11-09 01:04:11.314
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2016-11-09 14:58:47.041 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/xinwang/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/xinwang/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-11-09 14:58:58.691
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-09 14:59:08.019
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-09 14:59:11.692
+!MESSAGE Monitoring content of /Users/xinwang/.aws/credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-09 14:59:11.912
+!MESSAGE AWS toolkit core plugin initialized after 3894 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-09 14:59:11.930
+!MESSAGE Found valid identity id cache us-east-1:d690ac76-96dc-4b94-a58c-3bdba5925801
+
+!ENTRY WACommon 4 0 2016-11-09 14:59:18.246
+!MESSAGE Plugin folder path:/Applications/Eclipse.app/Contents/Eclipse/../../../../Users/xinwang/.p2/pool/plugins
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-09 14:59:20.154
+!MESSAGE Azure SDK is not installed.
+!STACK 0
+java.io.IOException: Azure SDK is not installed.
+	at com.interopbridges.tools.windowsazure.WindowsAzureProjectManager.getLatestAzureSdkDir(WindowsAzureProjectManager.java:2244)
+	at com.persistent.util.WAStartUp.getSchemasLocation(WAStartUp.java:246)
+	at com.persistent.util.WAStartUp.createEntries(WAStartUp.java:195)
+	at com.persistent.util.WAStartUp.makeXMLCatalogEntry(WAStartUp.java:183)
+	at com.persistent.util.WAStartUp.earlyStartup(WAStartUp.java:68)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:77)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$55.run(Workbench.java:2829)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-09 14:59:20.160
+!MESSAGE Homework2isOpentrue
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-09 14:59:20.161
+!MESSAGE Homework2isNaturefalse
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-09 14:59:20.162
+!MESSAGE RemoteSystemsTempFilesisOpentrue
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-09 14:59:20.162
+!MESSAGE RemoteSystemsTempFilesisNaturefalse
+
+!ENTRY org.eclipse.jface.text 2 0 2016-11-09 15:00:19.234
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-11-09 15:00:19.234
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2016-11-10 15:21:46.741 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/xinwang/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/xinwang/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-11-10 15:22:01.482
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-10 15:22:11.386
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-10 15:22:13.518
+!MESSAGE Monitoring content of /Users/xinwang/.aws/credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-10 15:22:13.746
+!MESSAGE AWS toolkit core plugin initialized after 2360 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-10 15:22:13.758
+!MESSAGE Found valid identity id cache us-east-1:d690ac76-96dc-4b94-a58c-3bdba5925801
+
+!ENTRY WACommon 4 0 2016-11-10 15:22:20.555
+!MESSAGE Plugin folder path:/Applications/Eclipse.app/Contents/Eclipse/../../../../Users/xinwang/.p2/pool/plugins
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-10 15:22:22.679
+!MESSAGE Azure SDK is not installed.
+!STACK 0
+java.io.IOException: Azure SDK is not installed.
+	at com.interopbridges.tools.windowsazure.WindowsAzureProjectManager.getLatestAzureSdkDir(WindowsAzureProjectManager.java:2244)
+	at com.persistent.util.WAStartUp.getSchemasLocation(WAStartUp.java:246)
+	at com.persistent.util.WAStartUp.createEntries(WAStartUp.java:195)
+	at com.persistent.util.WAStartUp.makeXMLCatalogEntry(WAStartUp.java:183)
+	at com.persistent.util.WAStartUp.earlyStartup(WAStartUp.java:68)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:77)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$55.run(Workbench.java:2829)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-10 15:22:22.685
+!MESSAGE Homework2isOpentrue
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-10 15:22:22.685
+!MESSAGE Homework2isNaturefalse
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-10 15:22:22.686
+!MESSAGE RemoteSystemsTempFilesisOpentrue
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-10 15:22:22.686
+!MESSAGE RemoteSystemsTempFilesisNaturefalse

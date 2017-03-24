@@ -1,0 +1,184 @@
+/**
+ * 08722 Homework 3.
+ * @author Xin Wang
+ * Andrew ID: xinw3
+ */
+public class SortedLinkedList implements MyListInterface {
+    /**
+     * Head node of the LinkedList.
+     */
+    private Node head;
+    /**
+     * Inner class to define Node.
+     */
+    public static class Node {
+        /**
+         * String value of the Node.
+         */
+        private String data;
+        /**
+         * Refer to the next Node.
+         */
+        private Node next;
+        /**
+         * Constructor.
+         * @param s String value of the Node.
+         * @param n Node refers to the next Node.
+         */
+        public Node(String s, Node n) {
+            data = s;
+            next = n;
+        }
+    }
+    /**
+     * No-arg Constructor.
+     */
+    public SortedLinkedList() {
+        this(null);
+    }
+    /**
+     * Constructor with argument.
+     * @param unsortedArray String array to be sorted.
+     */
+    public SortedLinkedList(String[] unsortedArray) {
+        sortedLinkedList(unsortedArray, unsortedArray.length - 1);
+    }
+    /**
+     * Inserts a new String.
+     * No duplicates allowed and maintain the order in ascending order.
+     * @param value String to be added.
+     */
+    @Override
+    public void add(String value) {
+        head = add(head, value);
+    }
+    /**
+     * Checks the size (number of data items) of the list.
+     * @return the size of the list
+     */
+    @Override
+    public int size() {
+        return size(head);
+    }
+    /**
+     * Displays the values of the list.
+     */
+    @Override
+    public void display() {
+        display(head);
+    }
+    /**
+     * Returns true if the key value is in the list.
+     * @param key String key to search
+     * @return true if found, false if not found
+     */
+    @Override
+    public boolean contains(String key) {
+        return contains(head, key);
+    }
+    /**
+     * Returns true is the list is empty.
+     * @return true if it is empty, false if it is not empty
+     */
+    @Override
+    public boolean isEmpty() {
+        return head == null;
+    }
+    /**
+     * Removes and returns the first String object of the list.
+     * @return String object that is removed
+     */
+    @Override
+    public String removeFirst() {
+        Node newHead = head;
+        head = head.next;
+        return newHead.data;
+    }
+    /**
+     * Removes and returns String object at the specified index.
+     * @param index index to remove String object
+     * @return String object that is removed
+     */
+    @Override
+    public String removeAt(int index) {
+        return removeAt(head, index);
+    }
+
+    /****************************
+     * My own helper function.
+     ****************************/
+    /**
+     * Helper function of Constructor.
+     * @param us unsortedArray
+     * @param index the index of the array to be added to the LinkedList.
+     */
+    private void sortedLinkedList(String[] us, int index) {
+        if (index < 0 || us == null) {
+            return;
+        } else {
+            add(us[index]);
+            sortedLinkedList(us, index - 1);
+        }
+    }
+    /**
+     * Helper function of size.
+     * @param n
+     * @return int size of the LinkedList.
+     */
+    private static int size(Node n) {
+        if (n == null) {
+            return 0;
+        }
+        return 1 + size(n.next);
+    }
+    private void display(Node n) {
+        if (n == null) {
+            System.out.println("]");
+            return;
+        }
+        if (n == head) {
+            System.out.print("[");
+        }
+        System.out.print(n.data + ", ");
+        display(n.next);
+    }
+    private Node add(Node n, String s) {
+        if (!s.trim().isEmpty() && s != null) {
+            if (n == null || s.compareTo(n.data) < 0) {
+                return new Node(s, n);
+            } else if (s.compareTo(n.data) == 0) {
+                return n;
+            } else {
+                n.next = add(n.next, s);
+                return n;
+            }
+        }
+        return n;
+    }
+    private static boolean contains(Node n, String s) {
+        if (s != null && !s.trim().isEmpty()) {
+            if (n == null) {
+                return false;
+            }
+            if (n.data.equals(s)) {
+                return true;
+            }
+            return contains(n.next, s);
+        }
+        return false;
+    }
+    private String removeAt(Node n, int index) {
+        if (index < 0 || n == null) {
+            return null;
+        }
+        if (index == 0) {
+            return removeFirst();
+        } else if (index == 1) {
+            Node node = n;
+            n.next = n.next.next;
+            return node.next.data;
+        } else {
+            return removeAt(n.next, index - 1);
+        }
+    }
+}

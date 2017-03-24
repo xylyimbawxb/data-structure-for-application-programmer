@@ -1,0 +1,73 @@
+!SESSION 2016-11-21 09:19:20.708 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/xinwang/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/xinwang/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-11-21 09:19:42.286
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 4 4 2016-11-21 09:19:47.638
+!MESSAGE Referenced part does not exist yet: org.eclipse.jdt.ui.PackageExplorer.
+
+!ENTRY WACommon 4 0 2016-11-21 09:19:50.163
+!MESSAGE Plugin folder path:/Applications/Eclipse.app/Contents/Eclipse/../../../../Users/xinwang/.p2/pool/plugins
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-21 09:19:51.401
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-21 09:19:54.269
+!MESSAGE No profile found: xinwang
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-21 09:19:54.367
+!MESSAGE Monitoring content of /Users/xinwang/.aws/credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-21 09:19:54.520
+!MESSAGE AWS toolkit core plugin initialized after 3120 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-21 09:19:54.591
+!MESSAGE The current accountId is not found in the system. Switching to the default account.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-21 09:19:54.679
+!MESSAGE Initialized a new Cognito identity us-east-1:ca60a826-59d5-49c1-a5a4-df2fc360b111
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-21 09:20:03.444
+!MESSAGE Not Windows OS, skipping getSDK
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-21 09:20:03.965
+!MESSAGE Azure SDK is not installed.
+!STACK 0
+java.io.IOException: Azure SDK is not installed.
+	at com.interopbridges.tools.windowsazure.WindowsAzureProjectManager.getLatestAzureSdkDir(WindowsAzureProjectManager.java:2244)
+	at com.persistent.util.WAStartUp.getSchemasLocation(WAStartUp.java:246)
+	at com.persistent.util.WAStartUp.createEntries(WAStartUp.java:195)
+	at com.persistent.util.WAStartUp.makeXMLCatalogEntry(WAStartUp.java:183)
+	at com.persistent.util.WAStartUp.earlyStartup(WAStartUp.java:68)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:77)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$55.run(Workbench.java:2829)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-21 09:20:03.976
+!MESSAGE RemoteSystemsTempFilesisOpentrue
+
+!ENTRY WAEclipsePlugin 4 0 2016-11-21 09:20:03.977
+!MESSAGE RemoteSystemsTempFilesisNaturefalse
+
+!ENTRY org.eclipse.oomph.setup.ui 1 0 2016-11-21 09:20:05.007
+!MESSAGE Setup tasks were performed during startup updating 5 preferences. See '/Applications/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.oomph.setup/setup.log' for details
+
+!ENTRY com.amazonaws.eclipse.sdk.ui 1 0 2016-11-21 09:21:22.784
+!MESSAGE Downloading the SDK from CloudFront to location /var/folders/g4/y8x59s9j4f17hmvvtnb6g6w40000gn/T/aws-java-sdk6354983502435912492/sdk.zip
+
+!ENTRY com.amazonaws.eclipse.sdk.ui 1 0 2016-11-21 09:21:49.213
+!MESSAGE SDK download completes. Location: /var/folders/g4/y8x59s9j4f17hmvvtnb6g6w40000gn/T/aws-java-sdk6354983502435912492/sdk.zip, File-length: 213718095
+
+!ENTRY org.eclipse.jface.text 2 0 2016-11-21 10:20:10.036
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-11-21 10:20:10.037
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

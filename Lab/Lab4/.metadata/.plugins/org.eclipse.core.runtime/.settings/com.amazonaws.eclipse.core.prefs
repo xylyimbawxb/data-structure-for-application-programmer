@@ -1,0 +1,9 @@
+cognitoIdentityId=us-east-1\:ca60a826-59d5-49c1-a5a4-df2fc360b111
+cognitoIdentityPoolId=us-east-1\:d4fdc07f-94fd-4cc6-94fb-f903657f05c1
+credentialProfileAccountIds=d14be191-1007-4a97-8a8c-3122bdc368f2
+currentAccount=d14be191-1007-4a97-8a8c-3122bdc368f2
+currentDefaultAccount=
+d14be191-1007-4a97-8a8c-3122bdc368f2\:credentialProfileName=xinwang
+ec2PreferencesImported=true
+eclipse.preferences.version=1
+mobileAnalyticsClientId=502774fa-14aa-4fd3-b69b-e2023d0c6a8e
